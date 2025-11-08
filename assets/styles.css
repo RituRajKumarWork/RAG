@@ -1,0 +1,104 @@
+/* === Base Reset === */
+body, html {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f1117;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+/* === Header === */
+.header {
+    text-align: center;
+    padding: 2rem 0;
+    background: linear-gradient(120deg, #00ffe0, #8e2de2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.header h1 {
+    font-size: 2.8rem;
+    margin: 0;
+}
+.header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* === Chat Title === */
+.chat-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #00ffe0;
+    margin: 1.5rem 0 0.5rem;
+}
+
+/* === Chat Bubbles === */
+.chat-bubble {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 20px rgba(0, 255, 224, 0.15);
+    animation: fadeInUp 0.4s ease;
+}
+.chat-bubble.user {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #00ffe0;
+}
+.chat-bubble.bot {
+    background: rgba(0, 255, 204, 0.1);
+    border-left: 4px solid #00ffe0;
+}
+.chat-bubble span {
+    font-weight: bold;
+    color: #00ffd5;
+}
+.chat-bubble p {
+    margin: 0.5rem 0 0;
+    line-height: 1.5;
+}
+
+/* === Sticky Chat Input === */
+.stTextInput {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    z-index: 999;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 0.8rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+/* === Expander / Sources === */
+.streamlit-expanderHeader {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #00ffe0;
+}
+code {
+    color: #00e1f3;
+    background: #1a1f2e;
+    padding: 0.4rem;
+    display: block;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+/* === Animations === */
+@keyframes fadeInUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* === Scrollbar === */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #00ffe0, #8e2de2);
+    border-radius: 10px;
+}
